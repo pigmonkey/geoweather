@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Geoweather</title>
+        <link rel="icon" type="image/ico" href="https://www.weather.gov/favicon.ico">
+        <script>
+            function geoWeather() {
+                navigator.geolocation.getCurrentPosition(function(pos) {
+                    var currentURL = new URL(window.location.href);
+                    if (currentURL.searchParams.has('darksky')) {
+                        var forecastURL = 'https://darksky.net/forecast/' + pos.coords.latitude + ',' + pos.coords.longitude;
+                    } else if (window.screen.width < 800) {
+                        var forecastURL = 'https://mobile.weather.gov/index.php?lat=' + pos.coords.latitude + '&lon=' + pos.coords.longitude;
+                    } else {
+                        var forecastURL = 'https://forecast.weather.gov/MapClick.php?lat=' + pos.coords.latitude + '&lon=' + pos.coords.longitude;
+                    }
+                    var el = document.getElementById('result');
+                    el.innerHTML = '<p>Forecast URL is <a href="' + forecastURL + '"> ' + forecastURL + '</a></p>';
+                    window.location.replace(forecastURL);
+                });
+            }
+            window.onload = geoWeather;
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
