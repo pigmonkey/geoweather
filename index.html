@@ -10,6 +10,8 @@
                     var currentURL = new URL(window.location.href);
                     if (currentURL.searchParams.has('darksky')) {
                         var forecastURL = 'https://darksky.net/forecast/' + pos.coords.latitude + ',' + pos.coords.longitude;
+                    } else if (currentURL.searchParams.has('wind')) {
+                        var forecastURL = 'https://www.windy.com?' + pos.coords.latitude + ',' + pos.coords.longitude + ',11';
                     } else if (window.screen.width < 800) {
                         var forecastURL = 'https://mobile.weather.gov/index.php?lat=' + pos.coords.latitude + '&lon=' + pos.coords.longitude;
                     } else {
