@@ -20,7 +20,7 @@ Bonus: the forecast service doesn't have permission to locate you.
 
 ## Supported Forecasts
 
-The default forecast service is the [National Weather Service](https://www.weather.gov/). If your screen width is less than 800px, you'll be directed to [the mobile version](https://mobile.weather.gov/).
+The default forecast service is the [National Weather Service](https://www.weather.gov/).
 
 Append the `?darksky` querystring to be redirected to [Dark Sky](https://darksky.net/).
 
