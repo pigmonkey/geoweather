@@ -12,6 +12,8 @@
                         var forecastURL = 'https://darksky.net/forecast/' + pos.coords.latitude + ',' + pos.coords.longitude;
                     } else if (currentURL.searchParams.has('wind')) {
                         var forecastURL = 'https://www.windy.com?' + pos.coords.latitude + ',' + pos.coords.longitude + ',11';
+                    } else if (currentURL.searchParams.has('merry')) {
+                        var forecastURL = 'https://merrysky.net/forecast/' + pos.coords.latitude + ',' + pos.coords.longitude + '/us';
                     } else {
                         var forecastURL = 'https://forecast.weather.gov/MapClick.php?lat=' + pos.coords.latitude + '&lon=' + pos.coords.longitude;
                     }

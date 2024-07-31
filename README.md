@@ -26,6 +26,8 @@ Append the `?darksky` querystring to be redirected to [Dark Sky](https://darksky
 
 Append the `?windy` querystring to be redirected to [Windy](https://www.windy.com/).
 
+Append the `?merry` querystring to be redirected to [Merry Sky](https://merrysky.net/).
+
 ## Tips
 
 If they detect that you are on a mobile device, both Both Dark Sky and Windy will waste valuable screen real estate with elements that ask you to install their mobile application. Use the [uBlock Origin element picker](https://github.com/gorhill/uBlock/wiki/Element-picker) to eliminate this waste.
